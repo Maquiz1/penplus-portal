@@ -1,9 +1,12 @@
 # filepath: /home/maquiz/projects/Hospital_Systems/penplus-edc/src/middleware/domain_check.py
-from django.http import HttpResponse
-from django.conf import settings
 from django.shortcuts import render
 
+
 class DomainCheckMiddleware:
+    """
+    MIDDLE WARE FOR DIFFERENT APP DOMAINS
+    """
+
     def __init__(self, get_response):
         self.get_response = get_response
 
