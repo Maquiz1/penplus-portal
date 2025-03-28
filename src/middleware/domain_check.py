@@ -1,6 +1,7 @@
 # filepath: /home/maquiz/projects/Hospital_Systems/penplus-edc/src/middleware/domain_check.py
 from django.http import HttpResponse
 from django.conf import settings
+from django.shortcuts import render
 
 class DomainCheckMiddleware:
     def __init__(self, get_response):
@@ -19,6 +20,7 @@ class DomainCheckMiddleware:
         if host in domain_to_urlconf:
             request.urlconf = domain_to_urlconf[host]
         else:
-            return HttpResponse("Unknown domain", status=404)
+            # return HttpResponse("Unknown domain", status=404)
+            return render(request, 'base.html')
 
         return self.get_response(request)

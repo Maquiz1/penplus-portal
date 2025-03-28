@@ -33,7 +33,8 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['penplus.com', 'www.penplus.com', 'pedx.com', 'www.pedx.com', 'logbook.com', 'www.logbook.com']
+ALLOWED_HOSTS = ['penplus.com', 'www.penplus.com', 'pedx.com', 'www.pedx.com', 'logbook.com', 'www.logbook.com',
+                 '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -91,7 +92,7 @@ WSGI_APPLICATION = 'src.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Default database (can be a placeholder)
-        'NAME': env('PENPLUS_DB_NAME'),       # Use the Penplus database as default
+        'NAME': env('PENPLUS_DB_NAME'),  # Use the Penplus database as default
         'USER': env('PENPLUS_DB_USER'),
         'PASSWORD': env('PENPLUS_DB_PASSWORD'),
         'HOST': env('PENPLUS_DB_HOST'),
@@ -161,7 +162,7 @@ STATIC_URL = 'static/'
 
 # Define multiple static directories
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/penplus'),       # Static files for penplus
+    os.path.join(BASE_DIR, 'static/penplus'),  # Static files for penplus
     os.path.join(BASE_DIR, 'static/pedx_logbook'),  # Static files for pedx and logbook
 ]
 
