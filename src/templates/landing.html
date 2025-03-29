@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Hospital Systems Portal</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ penplus_domain }}">Penplus</a></li>
+            <li><a href="{{ pedx_domain }}">Pedx</a></li>
+            <li><a href="{{ logbook_domain }}">Logbook</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p>&copy; 2025 Hospital Systems. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -5,7 +5,7 @@ from django.conf import settings
 
 class DomainCheckMiddleware:
     """
-    Middleware for handling different app domains and rendering appropriate templates.
+    Middleware for handling different app domains and routing requests to the correct app.
     """
 
     def __init__(self, get_response):
@@ -14,36 +14,24 @@ class DomainCheckMiddleware:
     def __call__(self, request):
         host = request.get_host().split(':')[0]  # Extract the domain without port
 
-        # Map domains to their respective URL configurations and base templates
+        # Map domains to their respective URL configurations
         domain_to_config = {
-            "penplus.com": {
-                "urlconf": "penplus.urls",
-                "base_template": "penplus/base.html",
-            },
-            "pedx.com": {
-                "urlconf": "pedx.urls",
-                "base_template": "pedx/base.html",
-            },
-            "logbook.com": {
-                "urlconf": "logbook.urls",
-                "base_template": "logbook/base.html",
-            },
+            "penplus.com": "penplus.urls",
+            "pedx.com": "pedx.urls",
+            "logbook.com": "logbook.urls",
         }
 
         if host in domain_to_config:
             # Set the URL configuration for the recognized domain
-            request.urlconf = domain_to_config[host]["urlconf"]
+            request.urlconf = domain_to_config[host]
         else:
-            # Render the appropriate base template for unrecognized domains
+            # Render the landing page for unrecognized domains
             context = {
                 'penplus_domain': settings.PENPLUS_DOMAIN,
                 'pedx_domain': settings.PEDX_DOMAIN,
                 'logbook_domain': settings.LOGBOOK_DOMAIN,
             }
-            # Use a default base template for unrecognized domains
-            return render(request, "base.html", context)
-            # return render(request, "base.html")
-
+            return render(request, "landing.html", context)
 
         # Proceed with the request if the domain is recognized
         return self.get_response(request)

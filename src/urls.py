@@ -1,16 +1,11 @@
-from django.http import HttpResponse
-from django.urls import path
-from django.shortcuts import render
-from django.conf import settings
-
-def default_view(request):
-    context = {
-        'penplus_domain': settings.PENPLUS_DOMAIN,
-        'pedx_domain': settings.PEDX_DOMAIN,
-        'logbook_domain': settings.LOGBOOK_DOMAIN,
-    }
-    return render(request, 'base.html', context)
+from django.contrib import admin
+from django.urls import path, include
+from src.views import landing  # Import the landing view from views.py
 
 urlpatterns = [
-    path("", default_view, name="default_view"),  # Ensure this is correctly mapped
+    path('admin/', admin.site.urls),  # Admin site
+    path('', landing, name='landing'),  # Landing page as the default view
+    path('penplus/', include('penplus.urls')),  # Penplus app URLs
+    path('pedx/', include('pedx.urls')),  # Pedx app URLs
+    path('logbook/', include('logbook.urls')),  # Logbook app URLs
 ]

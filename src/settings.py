@@ -33,7 +33,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','penplus.com', 'www.penplus.com', 'pedx.com', 'www.pedx.com', 'logbook.com', 'www.logbook.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'penplus.com', 'pedx.com', 'logbook.com']
 
 # Application definition
 
@@ -65,13 +65,8 @@ ROOT_URLCONF = 'src.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'templates',  # Shared templates
-            BASE_DIR / 'penplus/templates',  # Penplus-specific templates
-            BASE_DIR / 'pedx/templates',  # Pedx-specific templates
-            BASE_DIR / 'logbook/templates',  # Logbook-specific templates
-        ],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'src/templates')],  # Add shared templates directory
+        'APP_DIRS': True,  # Automatically find templates in app-specific directories
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -155,22 +150,8 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = 'static/'
-
-# Define multiple static directories
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static/penplus'),  # Static files for penplus
-#     os.path.join(BASE_DIR, 'static/pedx'),    # Static files for pedx
-#     os.path.join(BASE_DIR, 'static/logbook'), # Static files for logbook
-# ]
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
-# Define the directory where collected static files will be stored
+STATICFILES_DIRS = []  # No need for STATICFILES_DIRS since static files are inside each app
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
@@ -178,6 +159,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Domains for each app
 PENPLUS_DOMAIN = "http://penplus.com"
 PEDX_DOMAIN = "http://pedx.com"
 LOGBOOK_DOMAIN = "http://logbook.com"
