@@ -1,33 +1,125 @@
-<div class="app-footer d-flex justify-content-between align-items-center">
-    <!-- Left-aligned -->
-    <div class="footer-left">
-        <a href="http://penplus.com" target="_blank">penplus©2025</a>
+{% load static %}
+
+
+<footer class="footer">
+				
+    <!-- Footer Top -->
+    <div class="footer-top aos" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-about">
+                        <div class="footer-logo">
+                            <img src="{% static 'logbook/assets/img/logo.png' %}" alt="logo">
+                        </div>
+                        <div class="footer-about-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <div class="social-icon">
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-menu">
+                        <h2 class="footer-title">For Mentee</h2>
+                        <ul>
+                            <li><a href="search.html">Search Mentors</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-menu">
+                        <h2 class="footer-title">For Mentors</h2>
+                        <ul>
+                            <li><a href="appointments.html">Appointments</a></li>
+                            <li><a href="chat.html">Chat</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="dashboard.html">Mentor Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                
+                    <!-- Footer Widget -->
+                    <div class="footer-widget footer-contact">
+                        <h2 class="footer-title">Contact Us</h2>
+                        <div class="footer-contact-info">
+                            <div class="footer-address">
+                                <span><img src="{% static 'logbook/assets/img/icon/location-icon.svg' %}" alt=""></span>
+                                <p>3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
+                            </div>
+                            <p>
+                                <span class="d-inline-block"><img src="{% static 'logbook/assets/img/icon/call-icon.svg' %}" alt=""></span>+1 315 369 5943
+                            </p>
+                            <p class="mb-0">
+                                <span class="d-inline-block"><img src="{% static 'logbook/assets/img/icon/mail-icon.svg' %}" alt=""></span><a href="https://mentoring.dreamstechnologies.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5439313a203b263d3a3314312c35392438317a373b39">[email&#160;protected]</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /Footer Widget -->
+                    
+                </div>
+                
+            </div>
+        </div>
     </div>
-
-    <!-- Center-aligned -->
-    <div class="footer-center text-center">
-        <a href="http://pedx.com" target="_blank">pedx©2025</a>
+    <!-- /Footer Top -->
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+        
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="copyright-text">
+                            <p class="mb-0">&copy; 2023 Mentoring. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Copyright -->
+            
+        </div>
     </div>
-
-    <!-- Right-aligned -->
-    <div class="footer-right text-end">
-        <a href="http://logbook.com" target="_blank">logbook©2025</a>
-    </div>
-</div>
-
-<style>
-    .app-footer {
-      padding: 10px 20px;
-      background-color: #f8f9fa; /* Light gray background */
-      border-top: 1px solid #dee2e6; /* Optional border */
-  }
-
-  .app-footer a {
-      text-decoration: none;
-      color: #007bff; /* Bootstrap primary color */
-  }
-
-  .app-footer a:hover {
-      text-decoration: underline;
-  }
-</style>
+    <!-- /Footer Bottom -->
+    
+</footer>

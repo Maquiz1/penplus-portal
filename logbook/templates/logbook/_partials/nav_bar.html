@@ -1,374 +1,214 @@
 {% load static %}
-<div class="app-header d-flex align-items-center">
-
-    <!-- Brand container sm starts -->
-    <div class="brand-container-sm d-xl-none d-flex align-items-center">
-
-      <!-- App brand starts -->
-      <div class="app-brand">
-        <a href="index-2.html">
-          <img src="{% static 'assets/images/logo.svg' %}" class="logo" alt="Medicare Admin Template">
+<header class="header">
+  <div class="header-fixed">
+  <nav class="navbar navbar-expand-lg header-nav">
+    <div class="navbar-header">
+      <a id="mobile_btn" href="javascript:void(0);">
+        <span class="bar-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+      <a href="index.html" class="navbar-brand logo">
+        <img src="{% static 'logbook/assets/img/logo.png' %}" class="img-fluid" alt="Logo">
+      </a>
+    </div>
+    <div class="main-menu-wrapper">
+      <div class="menu-header">
+        <a href="index.html" class="menu-logo">
+          <img src="{% static 'logbook/assets/img/logo.png' %}" class="img-fluid" alt="Logo">
+        </a>
+        <a id="menu_close" class="menu-close" href="javascript:void(0);">
+          <i class="fas fa-times"></i>
         </a>
       </div>
-      <!-- App brand ends -->
-
-      <!-- Toggle sidebar starts -->
-      <button type="button" class="toggle-sidebar">
-        <i class="ri-menu-line"></i>
-      </button>
-      <!-- Toggle sidebar ends -->
-
-    </div>
-    <!-- Brand container sm ends -->
-
-    <!-- Search container starts -->
-    <div class="search-container d-xl-block d-none">
-      <input type="text" class="form-control" id="searchId" placeholder="Search">
-      <i class="ri-search-line"></i>
-    </div>
-    <!-- Search container ends -->
-
-    <!-- App header actions starts -->
-    <div class="header-actions">
-
-      <!-- Header actions starts -->
-      <div class="d-lg-flex d-none gap-2">
-
-        <!-- Select country dropdown starts -->
-        <div class="dropdown">
-          <a class="dropdown-toggle header-icon" href="#!" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <img src="{% static 'assets/images/flags/1x1/fr.svg' %}" class="header-country-flag" alt="Bootstrap Dashboards">
-          </a>
-          <div class="dropdown-menu dropdown-menu-end dropdown-mini">
-            <div class="country-container">
-              <a href="index-2.html" class="py-2">
-                <img src="{% static 'assets/images/flags/1x1/us.svg' %}" alt="Admin Panel">
-              </a>
-              <a href="index-2.html" class="py-2">
-                <img src="{% static 'assets/images/flags/1x1/in.svg' %}" alt="Admin Panels">
-              </a>
-              <a href="index-2.html" class="py-2">
-                <img src="{% static 'assets/images/flags/1x1/br.svg' %}" alt="Admin Dashboards">
-              </a>
-              <a href="index-2.html" class="py-2">
-                <img src="{% static 'assets/images/flags/1x1/tr.svg' %}" alt="Admin Templatess">
-              </a>
-              <a href="index-2.html" class="py-2">
-                <img src="{% static 'assets/images/flags/1x1/gb.svg' %}" alt="Google Admin">
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Select country dropdown ends -->
-
-        <!-- Bookmarks starts -->
-        <div class="dropdown">
-          <a class="dropdown-toggle header-icon" href="#!" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <i class="ri-star-line"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-end dropdown-300">
-            <h5 class="fw-semibold px-3 py-2 text-primary">Bookmarks</h5>
-
-            <div class="d-flex justify-content-center gap-3">
-              <a href="doctors-cards.html" class="text-center">
-                <div class="icon-box lg bg-primary-subtle rounded-5 mb-1">
-                  <i class="ri-stethoscope-line text-primary fs-4"></i>
-                </div>
-                Doctors
-              </a>
-              <a href="staff.html" class="text-center">
-                <div class="icon-box lg bg-primary-subtle rounded-5 mb-1">
-                  <i class="ri-nurse-line text-primary fs-4"></i>
-                </div>
-                Staff
-              </a>
-              <a href="patients-list.html" class="text-center">
-                <div class="icon-box lg bg-primary-subtle rounded-5 mb-1">
-                  <i class="ri-group-2-line text-primary fs-4"></i>
-                </div>
-                Patients
-              </a>
-            </div>
-
-            <!-- View all button starts -->
-            <div class="d-grid m-3">
-              <a href="javascript:void(0)" class="btn btn-outline-primary">Add New Bookmark</a>
-            </div>
-            <!-- View all button ends -->
-
-          </div>
-        </div>
-        <!-- Bookmarks ends -->
-
-        <!-- Notifications dropdown starts -->
-        <div class="dropdown">
-          <a class="dropdown-toggle header-icon" href="#!" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <i class="ri-list-check-3"></i>
-            <span class="count-label warning"></span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-end dropdown-300">
-            <h5 class="fw-semibold px-3 py-2 text-primary">Activity</h5>
-
-            <!-- Scroll starts -->
-            <div class="scroll300">
-
-              <!-- Activity List Starts -->
-              <div class="p-3">
-                <ul class="p-0 activity-list2">
-                  <li class="activity-item pb-3 mb-3">
-                    <a href="#!">
-                      <h5 class="fw-regular">
-                        <i class="ri-circle-fill text-danger me-1"></i>
-                        Invoices.
-                      </h5>
-                      <div class="ps-3 ms-2 border-start">
-                        <div class="d-flex align-items-center mb-2">
-                          <div class="flex-shrink-0">
-                            <img src="{% static 'assets/images/products/1.jpg' %}" class="img-3x rounded-1"
-                              alt="Hospital Admin Templates">
-                          </div>
-                          <div class="flex-grow-1 ms-3">
-                            23 invoices have been paid to the MediCare Labs.
-                          </div>
-                        </div>
-                        <p class="m-0 small">10:20AM Today</p>
+      <ul class="main-nav">
+        <li class="active megamenu has-submenu">
+          <a href="index.html">Home <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu mega-submenu">
+            <li>
+              <div class="megamenu-wrapper">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="single-demo active">
+                      <div class="demo-img">
+                        <a href="index.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-1.jpg' %}" class="img-fluid " alt="img"></a>
                       </div>
-                    </a>
-                  </li>
-                  <li class="activity-item pb-3 mb-3">
-                    <a href="#!">
-                      <h5 class="fw-regular">
-                        <i class="ri-circle-fill text-info me-1"></i>
-                        Purchased.
-                      </h5>
-                      <div class="ps-3 ms-2 border-start">
-                        <div class="d-flex align-items-center mb-2">
-                          <div class="flex-shrink-0">
-                            <img src="{% static 'assets/images/products/2.jpg' %}" class="img-3x rounded-1"
-                              alt="Hospital Admin Templates">
-                          </div>
-                          <div class="flex-grow-1 ms-3">
-                            28 new surgical equipments have been purchased.
-                          </div>
-                        </div>
-                        <p class="m-0 small">04:30PM Today</p>
+                      <div class="demo-info">
+                        <a href="index.html" class="inner-demo-img">Home - 1</a>
                       </div>
-                    </a>
-                  </li>
-                  <li class="activity-item pb-3 mb-3">
-                    <a href="#!">
-                      <h5 class="fw-regular">
-                        <i class="ri-circle-fill text-success me-1"></i>
-                        Appointed.
-                      </h5>
-                      <div class="ps-3 ms-2 border-start">
-                        <div class="d-flex align-items-center mb-2">
-                          <div class="flex-shrink-0">
-                            <img src="{% static 'assets/images/products/8.jpg' %}" class="img-3x rounded-1"
-                              alt="Hospital Admin Templates">
-                          </div>
-                          <div class="flex-grow-1 ms-3">
-                            36 new doctors and 28 staff members appointed.
-                          </div>
-                        </div>
-                        <p class="m-0 small">06:50PM Today</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="single-demo ">
+                      <div class="demo-img">
+                        <a href="index-2.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-2.jpg' %}" class="img-fluid" alt="img"></a>
                       </div>
-                    </a>
-                  </li>
-                  <li class="activity-item">
-                    <a href="#!">
-                      <h5 class="fw-regular">
-                        <i class="ri-circle-fill text-warning me-1"></i>
-                        Requested
-                      </h5>
-                      <div class="ps-3 ms-2 border-start">
-                        <div class="d-flex align-items-center mb-2">
-                          <div class="flex-shrink-0">
-                            <img src="{% static 'assets/images/products/9.jpg' %}" class="img-3x rounded-1"
-                              alt="Hospital Admin Templates">
-                          </div>
-                          <div class="flex-grow-1 ms-3">
-                            Requested for 6 new vehicles for medical emergency. .
-                          </div>
-                        </div>
-                        <p class="m-0 small">08:30PM Today</p>
+                      <div class="demo-info">
+                        <a href="index-2.html" class="inner-demo-img">Home - 2</a>
                       </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Activity List Ends -->
-
-            </div>
-            <!-- Scroll ends -->
-
-            <!-- View all button starts -->
-            <div class="d-grid m-3">
-              <a href="javascript:void(0)" class="btn btn-primary">View all</a>
-            </div>
-            <!-- View all button ends -->
-
-          </div>
-        </div>
-        <!-- Notifications dropdown ends -->
-
-        <!-- Notifications dropdown starts -->
-        <div class="dropdown">
-          <a class="dropdown-toggle header-icon" href="#!" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <i class="ri-alarm-warning-line"></i>
-            <span class="count-label success"></span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-end dropdown-300">
-            <h5 class="fw-semibold px-3 py-2 text-primary">Alerts</h5>
-
-            <!-- Scroll starts -->
-            <div class="scroll300">
-
-              <!-- Alert list starts -->
-              <div class="p-3">
-                <div class="d-flex py-2">
-                  <div class="icon-box md bg-primary rounded-circle me-3">
-                    <span class="fw-bold fs-6 text-white">BS</span>
+                    </div>
                   </div>
-                  <div class="m-0">
-                    <h6 class="mb-1 fw-semibold">Becky Shah</h6>
-                    <p class="mb-1">
-                      Appointed as a new President 2014-2025
-                    </p>
-                    <p class="small m-0 opacity-50">Today, 07:30pm</p>
+                  <div class="col-lg-3">
+                    <div class="single-demo">
+                      <div class="demo-img">
+                        <a href="index-3.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-3.jpg' %}" class="img-fluid" alt="img"></a>
+                      </div>
+                      <div class="demo-info">
+                        <a href="index-3.html" class="inner-demo-img">Home - 3</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="d-flex py-2">
-                  <div class="icon-box md bg-primary rounded-circle me-3">
-                    <span class="fw-bold fs-6 text-white">UF</span>
+                  <div class="col-lg-3">
+                    <div class="single-demo">
+                      <div class="demo-img">
+                        <a href="index-4.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-4.jpg' %}" class="img-fluid" alt="img"></a>
+                      </div>
+                      <div class="demo-info">
+                        <a href="index-4.html" class="inner-demo-img">Home - 4</a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="m-0">
-                    <h6 class="mb-1 fw-semibold">Ursula Frazier</h6>
-                    <p class="mb-1">
-                      Congratulate, James for new job.
-                    </p>
-                    <p class="small m-0 opacity-50">Today, 08:00pm</p>
+                  <div class="col-lg-3">
+                    <div class="single-demo">
+                      <div class="demo-img">
+                        <a href="index-5.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-6.jpg' %}"
+                            class="img-fluid" alt="img"></a>
+                      </div>
+                      <div class="demo-info">
+                        <a href="index-5.html" class="inner-demo-img">Home - 5</a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="d-flex py-2">
-                  <div class="icon-box md bg-primary rounded-circle me-3">
-                    <span class="fw-bold fs-6 text-white">MK</span>
+                  <div class="col-lg-3">
+                    <div class="single-demo">
+                      <div class="demo-img">
+                        <a href="index-6.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-8.jpg' %}"
+                            class="img-fluid" alt="img"></a>
+                      </div>
+                      <div class="demo-info">
+                        <a href="index-6.html" class="inner-demo-img">Home - 6</a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="m-0">
-                    <h6 class="mb-1 fw-semibold">Myra Kane</h6>
-                    <p class="mb-1">
-                      Lewis added new doctors training schedule.
-                    </p>
-                    <p class="small m-0 opacity-50">Today, 09:30pm</p>
+                  <div class="col-lg-3">
+                    <div class="single-demo">
+                      <div class="demo-img">
+                        <a href="index-7.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-7.jpg' %}"
+                            class="img-fluid" alt="img"></a>
+                      </div>
+                      <div class="demo-info">
+                        <a href="index-7.html" class="inner-demo-img">Home - 7</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="single-demo">
+                      <div class="demo-img">
+                        <a href="index-8.html" class="inner-demo-img"><img src="{% static 'logbook/assets/img/home-5.jpg' %}"
+                            class="img-fluid" alt="img"></a>
+                      </div>
+                      <div class="demo-info">
+                        <a href="index-8.html" class="inner-demo-img">Home - 8</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Alert list ends -->
-
-            </div>
-            <!-- Scroll ends -->
-
-            <!-- View all button starts -->
-            <div class="d-grid m-3">
-              <a href="javascript:void(0)" class="btn btn-primary">View all</a>
-            </div>
-            <!-- View all button ends -->
-
-          </div>
-        </div>
-        <!-- Notifications dropdown ends -->
-
-        <!-- Messages dropdown starts -->
-        <div class="dropdown">
-          <a class="dropdown-toggle header-icon" href="#!" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <i class="ri-message-3-line"></i>
-            <span class="count-label"></span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-end dropdown-300">
-            <h5 class="fw-semibold px-3 py-2 text-primary">Messages</h5>
-
-            <!-- Scroll starts -->
-            <div class="scroll300">
-
-              <!-- Messages list starts -->
-              <div class="p-3">
-                <div class="d-flex py-2">
-                  <img src="{% static 'assets/images/doctor3.png' %}" class="img-3x me-3 rounded-5"
-                    alt="Hospital Admin Templates">
-                  <div class="m-0">
-                    <h6 class="mb-1 fw-semibold">Albert Winters</h6>
-                    <p class="mb-1">
-                      Appointed as a new President 2014-2025
-                    </p>
-                    <p class="small m-0 opacity-50">Today, 07:30pm</p>
-                  </div>
-                </div>
-                <div class="d-flex py-2">
-                  <img src="{% static 'assets/images/doctor1.png' %}" class="img-3x me-3 rounded-5"
-                    alt="Hospital Admin Templates">
-                  <div class="m-0">
-                    <h6 class="mb-1 fw-semibold">Van Robinson</h6>
-                    <p class="mb-1">
-                      Congratulate, James for new job.
-                    </p>
-                    <p class="small m-0 opacity-50">Today, 08:00pm</p>
-                  </div>
-                </div>
-                <div class="d-flex py-2">
-                  <img src="{% static 'assets/images/doctor4.png' %}" class="img-3x me-3 rounded-5"
-                    alt="Hospital Admin Templates">
-                  <div class="m-0">
-                    <h6 class="mb-1 fw-semibold">Mara Coffey</h6>
-                    <p class="mb-1">
-                      Lewis added new doctors training schedule.
-                    </p>
-                    <p class="small m-0 opacity-50">Today, 09:30pm</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Messages list ends -->
-
-            </div>
-            <!-- Scroll ends -->
-
-            <!-- View all button starts -->
-            <div class="d-grid m-3">
-              <a href="javascript:void(0)" class="btn btn-primary">View all</a>
-            </div>
-            <!-- View all button ends -->
-
-          </div>
-        </div>
-      </div>
-      <!-- Header actions ends -->
-
-      <!-- Header user settings starts -->
-      <div class="dropdown ms-3">
-        <a id="userSettings" class="dropdown-toggle d-flex align-items-center" href="#!" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          <div class="avatar-box">
-            <img src="{% static 'assets/images/doctor5.png' %}" class="img-2xx rounded-5" alt="Medical Dashboard">
-            <span class="status busy"></span>
-          </div>
-        </a>
-        <div class="dropdown-menu dropdown-menu-end shadow-lg">
-          <div class="px-3 py-2">
-            <span class="small">Admin</span>
-            <h6 class="m-0">Max Goodwin</h6>
-          </div>
-          <div class="mx-3 my-2 d-grid">
-            <a href="login.html" class="btn btn-danger">Logout</a>
-          </div>
-        </div>
-      </div>
-      <!-- Header user settings ends -->
-
-    </div>
-    <!-- App header actions ends -->
-
+            </li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="#">Mentor <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="dashboard.html">Mentor Dashboard</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="schedule-timings.html">Schedule Timing</a></li>
+            <li><a href="mentee-list.html">Mentee List</a></li>
+            <li><a href="profile-mentee.html">Mentee Profile</a></li>
+            <li class="has-submenu">
+              <a href="blog.html">Blog</a>
+              <ul class="submenu">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="blog-details.html">Blog View</a></li>
+                <li><a href="add-blog.html">Add Blog</a></li>
+                <li><a href="edit-blog.html">Edit Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="chat.html">Chat</a></li>
+            <li><a href="invoices.html">Invoices</a></li>
+            <li><a href="profile-settings.html">Profile Settings</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="mentor-register.html">Mentor Register</a></li>
+          </ul>
+        </li>	
+        <li class="has-submenu">
+          <a href="#">Mentee <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li class="has-submenu">
+              <a href="#">Mentors</a>
+              <ul class="submenu">
+                <li><a href="map-grid.html">Map Grid</a></li>
+                <li><a href="map-list.html">Map List</a></li>
+              </ul>
+            </li>
+            <li><a href="search.html">Search Mentor</a></li>
+            <li><a href="profile.html">Mentor Profile</a></li>
+            <li><a href="bookings-mentee.html">Bookings</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="booking-success.html">Booking Success</a></li>
+            <li><a href="dashboard-mentee.html">Mentee Dashboard</a></li>
+            <li><a href="favourites.html">Favourites</a></li>
+            <li><a href="chat-mentee.html">Chat</a></li>
+            <li><a href="profile-settings-mentee.html">Profile Settings</a></li>
+            <li><a href="change-password.html">Change Password</a></li>
+          </ul>
+        </li>	
+        <li class="has-submenu">
+          <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="voice-call.html">Voice Call</a></li>
+            <li><a href="video-call.html">Video Call</a></li>
+            <li><a href="search.html">Search Mentors</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li class="has-submenu">
+              <a href="invoices.html">Invoices</a>
+              <ul class="submenu">
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="invoice-view.html">Invoice View</a></li>
+              </ul>
+            </li>
+            <li><a href="blank-page.html">Starter Page</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="forgot-password.html">Forgot Password</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="#">Blog <i class="fas fa-chevron-down"></i></a>
+          <ul class="submenu">
+            <li><a href="blog-list.html">Blog List</a></li>
+            <li><a href="blog-grid.html">Blog Grid</a></li>
+            <li><a href="blog-details.html">Blog Details</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="admin/index.html" target="_blank">Admin</a>
+        </li>
+        <li class="login-link">
+          <a href="login.html">Login / Signup</a>
+        </li>
+      </ul>		 
+    </div>		 
+    <ul class="nav header-navbar-rht">
+      <li class="nav-item">
+        <a class="nav-link header-login" href="login.html">Log In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link header-one-register" href="register.html">Register</a>
+      </li>
+    </ul>
+  </nav>
   </div>
+</header>
