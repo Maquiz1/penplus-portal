@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def home(request):
     # Example response for Logbook
-    return HttpResponse("Welcome to Logbook.com!")
+    return render(request, 'logbook/dashboard.html')
 
 def records(request):
     # Example of rendering a template for Logbook
