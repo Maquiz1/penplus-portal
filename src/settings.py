@@ -33,7 +33,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'penplus.com', 'pedx.com', 'logbook.com']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', '192.168.100.108', 'localhost', 'penplus.com', 'pedx.com', 'logbook.com']
 
 # Application definition
 
