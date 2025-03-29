@@ -160,9 +160,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Define multiple static directories
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static/penplus'),  # Static files for penplus
+#     os.path.join(BASE_DIR, 'static/pedx'),    # Static files for pedx
+#     os.path.join(BASE_DIR, 'static/logbook'), # Static files for logbook
+# ]
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/penplus'),  # Static files for penplus
-    os.path.join(BASE_DIR, 'static/pedx_logbook'),  # Static files for pedx and logbook
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Define the directory where collected static files will be stored
