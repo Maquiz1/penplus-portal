@@ -12,5 +12,5 @@ def default_view(request):
     return render(request, 'base.html', context)
 
 urlpatterns = [
-    path("", default_view),  # Fallback view
+    path("", default_view, name="default_view"),  # Ensure this is correctly mapped
 ]

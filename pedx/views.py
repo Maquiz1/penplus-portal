@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def home(request):
     # Example response for Pedx
-    return HttpResponse("Welcome to Pedx.com!")
+    return render(request, 'pedx/dashboard.html')
 
 def dashboard(request):
     # Example of rendering a template for Pedx

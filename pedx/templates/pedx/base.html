@@ -8,17 +8,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-     {% block title %}Pedx Base{% endblock %}
+        {% block title %}Pedx Base{% endblock %}
     </title>
 
-    {% include "_partials/head.html" %}
+    {% include "pedx/_partials/head.html" %}
 
 </head>
 
 <body>
 
 <!-- Loading starts -->
-{% include "_partials/starts_loading.html" %}
+{% include "pedx/_partials/starts_loading.html" %}
 
 <!-- Loading ends -->
 
@@ -29,19 +29,19 @@
     <div class="main-container">
 
         <!-- Sidebar wrapper starts -->
-        {% include "_partials/side_bar.html" %}
+        {% include "pedx/_partials/side_bar.html" %}
         <!-- Sidebar wrapper ends -->
 
         <!-- App container starts -->
         <div class="app-container">
 
             <!-- App header starts -->
-            {% include "_partials/nav_bar.html" %}
+            {% include "pedx/_partials/nav_bar.html" %}
             <!-- App header ends -->
 
             <!-- App hero header starts -->
             {% block header %}
-            {% include "_partials/header.html" %}
+            {% include "pedx/_partials/header.html" %}
             {% endblock header %}
             <!-- App Hero header ends -->
 
@@ -62,7 +62,7 @@
             <!-- App body ends -->
 
             <!-- App footer starts -->
-            {% include "_partials/footer.html" %}
+            {% include "pedx/_partials/footer.html" %}
             <!-- App footer ends -->
 
         </div>
@@ -77,7 +77,7 @@
 <!-- *************
         ************ JavaScript Files *************
     ************* -->
-{% include "_partials/foot.html" %}
+{% include "pedx/_partials/foot.html" %}
 </body>
 
 
